@@ -26,7 +26,7 @@ const Hero =() => {
                             <VideoModal/>
                         </div>
                         <div className="lawyer-pic">
-                            <Image src={jhanselGlasses} alt=""/>
+                            <Image src={jhanselGlasses} height={360} width={360} className={'mr-32 mb-16'} alt="Jhansel Smiling"/>
                             <div className="lawyer-shape">
                                 <div className="shape-1"><Image src={simg1} alt=""/></div>
                                 <div className="shape-2"><Image src={simg2} alt=""/></div>
