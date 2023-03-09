@@ -79,8 +79,8 @@ const Services = [
     {
         Id: '5',
         sImg: simg5,
-        sTitle: 'Municpal Tax Procedures',
-        slug: 'Municpal-Tax-Procedures',
+        sTitle: 'Municipal Tax Procedures',
+        slug: 'Municipal-Tax-Procedures',
         description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo ',
         des2: 'The lower-numbered purposes are better understood and practiced',
         des3: 'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
