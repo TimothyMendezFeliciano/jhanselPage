@@ -1,14 +1,20 @@
-import Link from "next/link";
 import Image from "next/image"
-import himg from '/public/images/slider/1.png'
-import tccBanner from '/public/images/logo.png'
-import jhanselGlasses from '/public/images/jhanselOne.jpg'
-
 import simg1 from '/public/images/slider/shape-1.png'
 import simg2 from '/public/images/slider/shape-2.png'
 import VideoModal from "@/components/VideoModal";
+import React from "react";
+import HeroImages from "@/pages/api/HeroImages";
+import ImageGallery from 'react-image-gallery'
 
-const Hero =() => {
+const Hero = () => {
+    const scrollIntoFeatures = () => {
+        const options: ScrollIntoViewOptions = {
+            block: 'start',
+            inline: 'nearest',
+            behavior: 'smooth'
+        }
+        document.getElementById('features').scrollIntoView(options)
+    }
     return (
         <section className="static-hero">
             <div className="hero-container">
@@ -22,11 +28,16 @@ const Hero =() => {
                         </div>
                         <div className="clearfix"></div>
                         <div data-swiper-parallax="500" className="slide-btns">
-                            <Link href="/about" className="theme-btn">Explore more</Link>
+                            <div onClick={scrollIntoFeatures} className="theme-btn hover:cursor-pointer">Explore more</div>
                             <VideoModal/>
                         </div>
                         <div className="lawyer-pic">
-                            <Image src={jhanselGlasses} height={360} width={360} className={'mr-32 mb-16'} alt="Jhansel Smiling"/>
+                            <ImageGallery items={HeroImages} autoPlay={true}
+                                          showNav={false} showThumbnails={false}
+                                          showFullscreenButton={false} showPlayButton={false} showBullets={false}
+                            />
+                            {/*<Image src={jhanselGlasses} height={360} width={360} className={'mr-32 mb-16'}*/}
+                            {/*       alt="Jhansel Smiling"/>*/}
                             <div className="lawyer-shape">
                                 <div className="shape-1"><Image src={simg1} alt=""/></div>
                                 <div className="shape-2"><Image src={simg2} alt=""/></div>
