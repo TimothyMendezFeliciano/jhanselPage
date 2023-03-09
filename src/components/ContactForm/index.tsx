@@ -111,7 +111,6 @@ const Consultinencey = () => {
                                                     onChange={(e) => changeHandler(e)}
                                                     value={forms.subject}
                                                     className="form-control"
-                                                    type="text"
                                                     name="subject">
                                                     <option>Closing Notary Service</option>
                                                     <option>Coordinate Escrow Deposit</option>
@@ -130,7 +129,6 @@ const Consultinencey = () => {
                                                     onChange={(e) => changeHandler(e)}
                                                     className="form-control"
                                                     value={forms.message}
-                                                    type="text"
                                                     name="message"
                                                     placeholder="Message">
                                                 </textarea>
