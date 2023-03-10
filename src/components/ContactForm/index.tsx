@@ -1,7 +1,8 @@
 import ImageGallery from 'react-image-gallery'
-import React, {useState} from 'react'
+import React, {useCallback, useState} from 'react'
 import SimpleReactValidator from 'simple-react-validator';
 import Images from "@/pages/api/ContactFormImages";
+import emailjs from '@emailjs/browser'
 
 
 const Consultinencey = () => {
@@ -13,6 +14,7 @@ const Consultinencey = () => {
         phone: '',
         message: ''
     });
+    const [showForm, setShowForm] = useState(true)
     const [validator] = useState(new SimpleReactValidator({
         className: 'errorMessage'
     }));
@@ -25,7 +27,7 @@ const Consultinencey = () => {
         }
     };
 
-    const submitHandler = e => {
+    const submitHandler = useCallback(async (e) => {
         e.preventDefault();
         if (validator.allValid()) {
             validator.hideMessages();
@@ -36,10 +38,29 @@ const Consultinencey = () => {
                 phone: '',
                 message: ''
             })
+
+            const {
+                status,
+                text
+            } = await emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, {
+                from_name: forms.name,
+                to_name: "The Closing Company",
+                subject: forms.subject,
+                message: forms.message,
+                phone_number: forms.phone,
+                contact_email: forms.email,
+            }, process.env.NEXT_PUBLIC_PUBLIC_ID);
+
+            if (status === 200) {
+                setShowForm(false)
+            } else {
+                console.log(text)
+            }
+
         } else {
             validator.showMessages();
         }
-    };
+    }, [forms, validator]);
 
     return (
         <section id={'contact-form'} className="wpo-consultancy-section section-padding">
@@ -57,13 +78,20 @@ const Consultinencey = () => {
                         <div className="col-lg-8 col-md-12 col-12">
                             <div className="wpo-consultancy-form-area">
                                 <div className="wpo-section-title">
-                                    <h2>Need Consultancy,
-                                        Request A Quote</h2>
-                                    <p>Sign the Form to Contact Us. Our team at The Closing Company will reach out as
-                                        soon as possible.
-                                    </p>
+                                    {showForm ? (
+                                        <>
+                                            <h2>Need Consultancy,
+                                                Request A Quote</h2>
+                                            <p>Sign the Form to Contact Us. Our team at The Closing Company will reach
+                                                out as
+                                                soon as possible.
+                                            </p>
+                                        </>
+                                    ) : (<>
+                                        <h2>Your message has been sent. The Closing Company will contact you soon.</h2>
+                                    </>)}
                                 </div>
-                                <form onSubmit={(e) => submitHandler(e)} className="form">
+                                {showForm ? (<form onSubmit={(e) => submitHandler(e)} className="form">
                                     <div className="row justify-content-center">
                                         <div className="col-lg-6 col-12">
                                             <div className="form-field">
@@ -112,6 +140,7 @@ const Consultinencey = () => {
                                                     value={forms.subject}
                                                     className="form-control"
                                                     name="subject">
+                                                    <option defaultValue={''}>Select a Category</option>
                                                     <option>Closing Notary Service</option>
                                                     <option>Coordinate Escrow Deposit</option>
                                                     <option>Title Search</option>
@@ -141,7 +170,7 @@ const Consultinencey = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </form>
+                                </form>) : (<></>)}
                                 <div className="border-style"></div>
                             </div>
                         </div>
