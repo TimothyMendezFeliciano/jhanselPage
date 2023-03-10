@@ -24,7 +24,7 @@ const Features = (props) => {
 
 
     return (
-        <section id={'features'} className="wpo-features-section-s2 section-padding">
+        <section className="wpo-features-section-s2 section-padding">
             <div className="container">
                 <div className="wpo-features-wrapper">
                     <div className="row">
