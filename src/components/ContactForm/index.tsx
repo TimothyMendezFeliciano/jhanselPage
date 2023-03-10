@@ -140,13 +140,13 @@ const Consultinencey = () => {
                                                     value={forms.subject}
                                                     className="form-control"
                                                     name="subject">
-                                                    <option defaultValue={''}>Select a Category</option>
-                                                    <option>Closing Notary Service</option>
-                                                    <option>Coordinate Escrow Deposit</option>
-                                                    <option>Title Search</option>
-                                                    <option>Resolve Property Issues</option>
-                                                    <option>Municipal Tax Procedures</option>
-                                                    <option>Transactional Structuring</option>
+                                                    <option className={'text-white'} defaultValue={''}>Select a Category</option>
+                                                    <option className={'text-white'} >Closing Notary Service</option>
+                                                    <option className={'text-white'} >Coordinate Escrow Deposit</option>
+                                                    <option className={'text-white'} >Title Search</option>
+                                                    <option className={'text-white'} >Resolve Property Issues</option>
+                                                    <option className={'text-white'} >Municipal Tax Procedures</option>
+                                                    <option className={'text-white'} >Transactional Structuring</option>
                                                 </select>
                                                 {validator.message('subject', forms.subject, 'required')}
                                             </div>

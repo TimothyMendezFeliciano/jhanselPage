@@ -44,6 +44,7 @@ const HeaderTopbar = () => {
                             <ul>
                                 <li><Link
                                     className={'hover:cursor-pointer text-inherit'}
+                                    target={'_blank'}
                                     href={'https://www.google.com/maps/place/1064+Av.+Juan+Ponce+de+Le%C3%B3n,+San+Juan,+00907/@18.4521508,-66.0790408,17z/data=!3m1!4b1!4m5!3m4!1s0x8c036f3128a1b4ab:0xad2638b105ce2dce!8m2!3d18.4521457!4d-66.0768521'}><i
                                     className={'fi ti-location-pin'}>1064 Ave. Ponce de Leon, San Juan PR
                                     00907</i></Link>

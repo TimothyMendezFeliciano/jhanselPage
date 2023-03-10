@@ -16,7 +16,7 @@ export default function PracticeArea() {
                     </div>
                     <div className="col-lg-5 offset-lg-2">
                         <div className="wpo-section-title">
-                            <p>(Optional) I need a small description here Jhansel.</p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
