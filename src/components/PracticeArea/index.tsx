@@ -5,11 +5,8 @@ import Services from '@/pages/api/Services';
 
 export default function PracticeArea() {
 
-    const ClickHandler = () => {
-        window.scrollTo(10, 0);
-    }
     return (
-        <section className="wpo-service-section-s2 section-padding">
+        <section id={'expertise'} className="wpo-service-section-s2 section-padding">
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-5">
