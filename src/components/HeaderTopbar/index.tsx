@@ -48,8 +48,7 @@ const HeaderTopbar = () => {
                                     className={'fi ti-location-pin'}>1064 Ave. Ponce de Leon, San Juan PR
                                     00907</i></Link>
                                 </li>
-                                <li><i className={'fi flaticon-email'}>legaldesk@theclosingcompany.legal/</i></li>
-                                {/*<li><i className={'fi flaticon-email'}>jnunez@theclosingcomapany.com</i></li>*/}
+                                <li><i className={'fi flaticon-email'}>legaldesk@theclosingcompany.legal</i></li>
                             </ul>
                         </div>
                     </div>

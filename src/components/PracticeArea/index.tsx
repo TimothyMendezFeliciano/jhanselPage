@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from "next/link";
 import Image from 'next/image'
 import Services from '@/pages/api/Services';
 
@@ -16,7 +15,7 @@ export default function PracticeArea() {
                     </div>
                     <div className="col-lg-5 offset-lg-2">
                         <div className="wpo-section-title">
-                            <p>(Optional) I need a small description here Jhansel.</p>
+                            <p>A Closing Company Attorney is responsible for overseeing and facilitating the legal aspects of a real estate transaction. Their duties typically include:</p>
                         </div>
                     </div>
                 </div>
