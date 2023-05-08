@@ -15,7 +15,7 @@ const Features = (props) => {
         },
         {
             fIcon: 'fi flaticon-badge',
-            title: 'General Notary Services',
+            title: 'Pre and Post Nuptial Agreements',
             des: 'Including affidavits, sworn statements, pre\'post capitulations, wills, donations, and mobile notary.',
         },
     ]
