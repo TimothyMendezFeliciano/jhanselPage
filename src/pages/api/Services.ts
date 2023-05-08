@@ -44,7 +44,7 @@ const Services = [
         slug: 'Title-Search',
         description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo ',
         des2: 'The lower-numbered purposes are better understood and practiced',
-        des3: 'Ensure that the property being bought or refinanced has a clear title and that the transaction is completed smoothly and legally. We review a variety of public records, including deeds, mortgages, liens, judgments, and other documents related to the property.',
+        des3: 'Ensure that the object of the transaction has a clear transferable title. And, the transaction is completed smoothly and legally. We review a variety of public records, including deeds, mortgages, liens, judgments, and other documents related to the property.',
         icon: titleSearchIcon,
         ssImg1: sSingleimg1,
         ssImg2: sSingleimg2,
