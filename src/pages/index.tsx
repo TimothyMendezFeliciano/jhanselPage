@@ -6,7 +6,7 @@ import Features from "@/components/Features";
 import PracticeArea from "@/components/PracticeArea";
 import ContactForm from "@/components/ContactForm";
 
-export default function Home() {
+export default function Home(props) {
     return (
         <Fragment>
             <Navbar Logo={Logo}/>
@@ -16,4 +16,12 @@ export default function Home() {
             <ContactForm/>
         </Fragment>
     )
+}
+
+export async function getStaticProps() {
+    return {
+        props: {
+            static: true
+        }
+    }
 }
