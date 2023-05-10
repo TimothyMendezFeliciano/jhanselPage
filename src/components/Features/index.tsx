@@ -16,7 +16,7 @@ const Features = (props) => {
         {
             fIcon: 'fi flaticon-badge',
             title: 'Pre and Post Nuptial Agreements',
-            des: 'Including affidavits, sworn statements, pre\'post capitulations, wills, donations, and mobile notary.',
+            des: 'Including affidavits, sworn statements, pre\'post nuptials, wills, donations, and mobile notary.',
         },
     ]
 

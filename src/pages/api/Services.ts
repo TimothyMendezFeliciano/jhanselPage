@@ -70,7 +70,7 @@ const Services = [
         slug: 'Resolve-Property-Issues',
         description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo ',
         des2: 'The lower-numbered purposes are better understood and practiced',
-        des3: 'If any issues are found during the Title Search we: identify, investigave and develop a strategy for resolving the issue. If needed we will take legal action. But our priority will always be facilitating the transaction.',
+        des3: 'If any issues are found during the Title Search we: identify, investigate and develop a strategy for resolving the issue. If needed we will take legal action. But our priority will always be facilitating the transaction.',
         icon: propertyIcon,
         ssImg1: sSingleimg1,
         ssImg2: sSingleimg2,
