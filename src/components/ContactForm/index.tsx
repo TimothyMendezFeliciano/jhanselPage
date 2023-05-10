@@ -80,8 +80,7 @@ const Consultinencey = () => {
                                 <div className="wpo-section-title">
                                     {showForm ? (
                                         <>
-                                            <h2>Need Consultancy,
-                                                Request A Quote</h2>
+                                            <h2>Have a Question?</h2>
                                             <p>Sign the Form to Contact Us. Our team at The Closing Company will reach
                                                 out as
                                                 soon as possible.
